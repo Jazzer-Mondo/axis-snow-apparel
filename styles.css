@@ -1,8 +1,96 @@
-/* =========================================================
-   AXIS SNOW APPAREL — X GAMES / LEVEL 1 VISUAL STYLE
-   Full cork rotations + animated grabs + moving park scene
-   Paste ALL of this at the BOTTOM of styles.css
-========================================================= */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0a0a0a;
+  color: white;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: rgba(0,0,0,0.6);
+  position: fixed;
+  width: 100%;
+}
+
+.navbar a {
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 60px;
+  background: linear-gradient(black, transparent);
+}
+
+.hero h2 {
+  font-size: 60px;
+}
+
+.hero button {
+  padding: 12px 24px;
+  background: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* SKI ART */
+.ski-art {
+  text-align: center;
+  padding: 60px;
+}
+
+.ski-svg {
+  width: 100%;
+  max-width: 800px;
+}
+
+.skier {
+  stroke: white;
+  stroke-width: 2;
+  fill: none;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* PRODUCTS */
+.products {
+  padding: 60px;
+  text-align: center;
+}
+
+.product-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.product {
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.product button {
+  margin-top: 10px;
+  padding: 10px;
+  background: white;
+  border: none;
+  cursor: pointer;
+}
 
 /* ===== PARK SCENE ===== */
 .ski-art {
@@ -13,7 +101,6 @@
     radial-gradient(circle at top, #1b1b1b 0%, #000 70%);
 }
 
-/* Moving speed/snow lines */
 .ski-art::before {
   content: "";
   position: absolute;
@@ -39,7 +126,6 @@
   }
 }
 
-/* ===== SVG AREA ===== */
 .ski-svg {
   width: 100%;
   max-width: 1200px;
@@ -49,7 +135,6 @@
   z-index: 2;
 }
 
-/* ===== SKIER STYLE ===== */
 .skier {
   stroke: white;
   stroke-width: 2.5;
@@ -65,12 +150,10 @@
     drop-shadow(0 0 20px rgba(255,255,255,0.08));
 }
 
-/* ===== FULL CORK ROTATIONS ===== */
 .cork {
   animation: corkSpin 4s cubic-bezier(.65,.05,.36,1) infinite;
 }
 
-/* stagger timing */
 .cork1 { animation-delay: 0s; }
 .cork2 { animation-delay: 1.2s; }
 .cork3 { animation-delay: 2.4s; }
@@ -126,7 +209,6 @@
   }
 }
 
-/* ===== GRAB MOTION ===== */
 .arm {
   animation: grabMotion 1.6s ease-in-out infinite;
 }
@@ -143,10 +225,4 @@
   100% {
     transform: translateX(0px) translateY(0px);
   }
-}
-
-/* ===== EXTRA FLOAT ===== */
-.skier:hover {
-  transform: scale(1.08);
-  transition: transform 0.3s ease;
 }
