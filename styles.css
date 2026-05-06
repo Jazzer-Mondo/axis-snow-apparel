@@ -1,56 +1,93 @@
 body {
   margin: 0;
-  font-family: Arial;
-  background: linear-gradient(to bottom, #0a0f1a, #1b2a3a);
-  color: white;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-}
-
-.hero {
-  text-align: center;
-  padding: 120px 20px;
-  background: url('https://images.unsplash.com/photo-1516569422535-cf84a88c1a3b') center/cover;
-}
-
-.content {
-  padding: 30px;
-}
-.ski-art {
-  text-align: center;
-  padding: 60px 20px;
+  font-family: Arial, sans-serif;
   background: #0a0a0a;
   color: white;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: rgba(0,0,0,0.6);
+  position: fixed;
+  width: 100%;
+}
+
+.navbar a {
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 60px;
+  background: linear-gradient(black, transparent);
+}
+
+.hero h2 {
+  font-size: 60px;
+}
+
+.hero button {
+  padding: 12px 24px;
+  background: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* SKI ART */
+.ski-art {
+  text-align: center;
+  padding: 60px;
 }
 
 .ski-svg {
   width: 100%;
   max-width: 800px;
-  margin-top: 30px;
 }
 
 .skier {
   stroke: white;
   stroke-width: 2;
   fill: none;
-  opacity: 0.8;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.skier:hover {
-  opacity: 1;
-  transform: scale(1.1);
-}
-@keyframes float {
-  0% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-10px) rotate(2deg); }
-  100% { transform: translateY(0px) rotate(0deg); }
-}
-
-.skier {
   animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* PRODUCTS */
+.products {
+  padding: 60px;
+  text-align: center;
+}
+
+.product-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.product {
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.product button {
+  margin-top: 10px;
+  padding: 10px;
+  background: white;
+  border: none;
+  cursor: pointer;
 }
