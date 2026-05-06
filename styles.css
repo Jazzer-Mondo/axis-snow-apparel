@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: linear-gradient(to bottom, #0a0f1a, #1b2a3a);
+  color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+  background: url('https://images.unsplash.com/photo-1516569422535-cf84a88c1a3b') center/cover;
+}
+
+.content {
+  padding: 30px;
+}
